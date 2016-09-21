@@ -1,0 +1,32 @@
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           true
+relative_permalinks: false
+permalink: /blog/:categories/:year/:month/:day/:title.html
+
+# Setup
+title:               boreda
+tagline:             
+url:                 http://www.jamesmahoney.co.uk
+paginate:            5
+paginate_path: "/blog/page:num/"
+baseurl:             ""
+
+
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:          _sass
+  style:            :compressed
+
+# About/contact
+author:
+  name:              James Mahoney
+  url:               http://www.jamesmahoney.co.uk
+  email:             mahoneyjames@gmail.com
+
+  
+highlighter: rouge
+# Custom vars

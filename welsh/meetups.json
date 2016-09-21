@@ -1,0 +1,407 @@
+{
+  "Generated": "2016-09-06T18:09:45.8450326+01:00",
+  "Items": [
+    {
+      "Status": "Confirmed",
+      "When": {
+        "Summary": "Weekly on Saturday, 10:00-12:00",
+        "Upcoming": [
+          "2016-09-10",
+          "2016-09-17",
+          "2016-09-24",
+          "2016-10-01",
+          "2016-10-08",
+          "2016-10-15",
+          "2016-10-22",
+          "2016-10-29",
+          "2016-11-05",
+          "2016-11-12",
+          "2016-11-19",
+          "2016-11-26",
+          "2016-12-03"
+        ],
+        "Repeats": "Weekly",
+        "Day": "Saturday",
+        "StartTime": "10:00",
+        "EndTime": "12:00"
+      },
+      "Area": "Newport",
+      "Title": "Siop a Siarad",
+      "Notes": "Come to SIARAD CYMRAEG in an informal and friendly atmosphere",
+      "Where": "Cwtsh, Arts centre Handpost, Stow Hill, Handpost, Newport",
+      "Postcode": "NP20 4HA",
+      "Link": "http://www.cwtsh.org/"
+    },
+    {
+      "Status": "Confirmed",
+      "When": {
+        "Summary": "Weekly on Tuesday, 19:00-21:00",
+        "Upcoming": [
+          "2016-09-06",
+          "2016-09-13",
+          "2016-09-20",
+          "2016-09-27",
+          "2016-10-04",
+          "2016-10-11",
+          "2016-10-18",
+          "2016-10-25",
+          "2016-11-01",
+          "2016-11-08",
+          "2016-11-15",
+          "2016-11-22",
+          "2016-11-29"
+        ],
+        "Repeats": "Weekly",
+        "Day": "Tuesday",
+        "StartTime": "19:00",
+        "EndTime": "21:00"
+      },
+      "Area": "Cwmbran",
+      "Title": "The Upper Cock - SSiW",
+      "Notes": "",
+      "Where": "The Upper Cock, The Hwy, Cwmbran",
+      "Postcode": "NP44 2HE",
+      "Link": "https://forum.saysomethingin.com/t/torfaen-meetup-tuesdays-1900-the-upper-cock-inn-croesyceiliog/247/39"
+    },
+    {
+      "Status": "Confirmed",
+      "When": {
+        "Summary": "Monthly, every 1st Saturday, 10:30",
+        "Upcoming": [
+          "2016-09-03",
+          "2016-10-01",
+          "2016-11-05"
+        ],
+        "Repeats": "Monthly",
+        "Day": "Saturday",
+        "WeekInTheMonth": 1,
+        "StartTime": "10:30"
+      },
+      "Area": "Newport",
+      "Title": "Newport Central Library",
+      "Notes": "Top floor of the library in John Frost Square, there's a lift if you can't do stairs",
+      "Where": "Central Library, John Frost Square, Newport NP20 1PA",
+      "Postcode": "",
+      "Link": ""
+    },
+    {
+      "Status": "Confirmed",
+      "When": {
+        "Summary": "Monthly, every 2nd Saturday, 10:30-12:00",
+        "Upcoming": [
+          "2016-09-10",
+          "2016-10-08",
+          "2016-11-12"
+        ],
+        "Repeats": "Monthly",
+        "Day": "Saturday",
+        "WeekInTheMonth": 2,
+        "StartTime": "10:30",
+        "EndTime": "12:00"
+      },
+      "Area": "Newport",
+      "Title": "SSiW - Coffee #1",
+      "Notes": "Look for a friendly chap with a beard and a copy of Lingo Newydd on the table.\nCoffee #1 on Commercial Street - *not* the new one in Friars Walk",
+      "Where": "Coffee #1, 47a Commercial Street, Newport",
+      "Postcode": "NP20 1LP",
+      "Link": "https://forum.saysomethingin.com/t/casnewydd-second-saturday-of-every-month-coffee-1-newport/658"
+    },
+    {
+      "Status": "Confirmed",
+      "When": {
+        "Summary": "Weekly on Wednesday, 09:30-10:30",
+        "Upcoming": [
+          "2016-09-07",
+          "2016-09-14",
+          "2016-09-21",
+          "2016-09-28",
+          "2016-10-05",
+          "2016-10-12",
+          "2016-10-19",
+          "2016-10-26",
+          "2016-11-02",
+          "2016-11-09",
+          "2016-11-16",
+          "2016-11-23",
+          "2016-11-30"
+        ],
+        "Repeats": "Weekly",
+        "Day": "Wednesday",
+        "StartTime": "09:30",
+        "EndTime": "10:30"
+      },
+      "Area": "Newport",
+      "Title": "Clwb darllen",
+      "Notes": "",
+      "Where": "Central Library, John Frost Square, Newport NP20 1PA",
+      "Postcode": "",
+      "Link": ""
+    },
+    {
+      "Status": "Confirmed",
+      "When": {
+        "Summary": "Weekly on Wednesday, 10:30-11:30",
+        "Upcoming": [
+          "2016-09-07",
+          "2016-09-14",
+          "2016-09-21",
+          "2016-09-28",
+          "2016-10-05",
+          "2016-10-12",
+          "2016-10-19",
+          "2016-10-26",
+          "2016-11-02",
+          "2016-11-09",
+          "2016-11-16",
+          "2016-11-23",
+          "2016-11-30"
+        ],
+        "Repeats": "Weekly",
+        "Day": "Wednesday",
+        "StartTime": "10:30",
+        "EndTime": "11:30"
+      },
+      "Area": "Newport",
+      "Title": "Clwb clonc",
+      "Notes": "",
+      "Where": "Central Library, John Frost Square, Newport NP20 1PA",
+      "Postcode": "",
+      "Link": ""
+    },
+    {
+      "Status": "Confirmed",
+      "When": {
+        "Summary": "Weekly on Thursday, 10:00-12:00",
+        "Upcoming": [
+          "2016-09-08",
+          "2016-09-15",
+          "2016-09-22",
+          "2016-09-29",
+          "2016-10-06",
+          "2016-10-13",
+          "2016-10-20",
+          "2016-10-27",
+          "2016-11-03",
+          "2016-11-10",
+          "2016-11-17",
+          "2016-11-24",
+          "2016-12-01"
+        ],
+        "Repeats": "Weekly",
+        "Day": "Thursday",
+        "StartTime": "10:00",
+        "EndTime": "12:00"
+      },
+      "Area": "Newport",
+      "Title": "Risca",
+      "Notes": "Opposite the Railway tavern, Risca",
+      "Where": "Dan y Graig church, Dan-y-Graig Road, Risca",
+      "Postcode": "NP11 6DB",
+      "Link": ""
+    },
+    {
+      "Status": "Confirmed",
+      "When": {
+        "Summary": "Weekly on Tuesday, 11:30",
+        "Upcoming": [
+          "2016-09-06",
+          "2016-09-13",
+          "2016-09-20",
+          "2016-09-27",
+          "2016-10-04",
+          "2016-10-11",
+          "2016-10-18",
+          "2016-10-25",
+          "2016-11-01",
+          "2016-11-08",
+          "2016-11-15",
+          "2016-11-22",
+          "2016-11-29"
+        ],
+        "Repeats": "Weekly",
+        "Day": "Tuesday",
+        "StartTime": "11:30"
+      },
+      "Area": "Newport",
+      "Title": "The Hanbury Arms",
+      "Notes": "",
+      "Where": "Uskside, Newport, Caerleon",
+      "Postcode": "NP18 1AA",
+      "Link": ""
+    },
+    {
+      "Status": "Tentative",
+      "When": {
+        "Summary": "Weekly on Wednesday, 17:30-19:30",
+        "Upcoming": [
+          "2016-09-07",
+          "2016-09-14",
+          "2016-09-21",
+          "2016-09-28",
+          "2016-10-05",
+          "2016-10-12",
+          "2016-10-19",
+          "2016-10-26",
+          "2016-11-02",
+          "2016-11-09",
+          "2016-11-16",
+          "2016-11-23",
+          "2016-11-30"
+        ],
+        "Repeats": "Weekly",
+        "Day": "Wednesday",
+        "StartTime": "17:30",
+        "EndTime": "19:30"
+      },
+      "Area": "Pontypool",
+      "Title": "Pontypool",
+      "Notes": "St James's Hall for the summer",
+      "Where": "The settlement",
+      "Postcode": "",
+      "Link": ""
+    },
+    {
+      "Status": "Tentative",
+      "When": {
+        "Summary": "Weekly on Thursday",
+        "Upcoming": [
+          "2016-09-08",
+          "2016-09-15",
+          "2016-09-22",
+          "2016-09-29",
+          "2016-10-06",
+          "2016-10-13",
+          "2016-10-20",
+          "2016-10-27",
+          "2016-11-03",
+          "2016-11-10",
+          "2016-11-17",
+          "2016-11-24",
+          "2016-12-01"
+        ],
+        "Repeats": "Weekly",
+        "Day": "Thursday",
+        "StartTime": ""
+      },
+      "Area": "Blaenafon",
+      "Title": "Blaenafon",
+      "Notes": "During the day?",
+      "Where": "",
+      "Postcode": "",
+      "Link": ""
+    },
+    {
+      "Status": "Tentative",
+      "When": {
+        "Summary": "Weekly on Tuesday, Morning",
+        "Upcoming": [
+          "2016-09-06",
+          "2016-09-13",
+          "2016-09-20",
+          "2016-09-27",
+          "2016-10-04",
+          "2016-10-11",
+          "2016-10-18",
+          "2016-10-25",
+          "2016-11-01",
+          "2016-11-08",
+          "2016-11-15",
+          "2016-11-22",
+          "2016-11-29"
+        ],
+        "Repeats": "Weekly",
+        "Day": "Tuesday",
+        "StartTime": "Morning"
+      },
+      "Area": "Blaenafon",
+      "Title": "Canolfan Croeso",
+      "Notes": "",
+      "Where": "Blaenafon",
+      "Postcode": "",
+      "Link": ""
+    },
+    {
+      "Status": "Tentative",
+      "When": {
+        "Summary": "Monthly, every 4th Saturday, 10:30-12:00",
+        "Upcoming": [
+          "2016-09-24",
+          "2016-10-22",
+          "2016-11-26"
+        ],
+        "Repeats": "Monthly",
+        "Day": "Saturday",
+        "WeekInTheMonth": 4,
+        "StartTime": "10:30",
+        "EndTime": "12:00"
+      },
+      "Area": "Chepstow",
+      "Title": "Saturday morning",
+      "Notes": "Usually sit around table 19, which is up the small set of steps and then around to the left.",
+      "Where": "The Lime Tree, Chepstow",
+      "Postcode": "",
+      "Link": ""
+    },
+    {
+      "Status": "Tentative",
+      "When": {
+        "Summary": "Weekly on Thursday",
+        "Upcoming": [
+          "2016-09-08",
+          "2016-09-15",
+          "2016-09-22",
+          "2016-09-29",
+          "2016-10-06",
+          "2016-10-13",
+          "2016-10-20",
+          "2016-10-27",
+          "2016-11-03",
+          "2016-11-10",
+          "2016-11-17",
+          "2016-11-24",
+          "2016-12-01"
+        ],
+        "Repeats": "Weekly",
+        "Day": "Thursday",
+        "StartTime": ""
+      },
+      "Area": "Abertillary",
+      "Title": "Abertillary - Thursday evening",
+      "Notes": "",
+      "Where": "",
+      "Postcode": "",
+      "Link": ""
+    },
+    {
+      "Status": "Tentative",
+      "When": {
+        "Summary": "Weekly on Saturday, 10:00-12:00",
+        "Upcoming": [
+          "2016-09-10",
+          "2016-09-17",
+          "2016-09-24",
+          "2016-10-01",
+          "2016-10-08",
+          "2016-10-15",
+          "2016-10-22",
+          "2016-10-29",
+          "2016-11-05",
+          "2016-11-12",
+          "2016-11-19",
+          "2016-11-26",
+          "2016-12-03"
+        ],
+        "Repeats": "Weekly",
+        "Day": "Saturday",
+        "StartTime": "10:00",
+        "EndTime": "12:00"
+      },
+      "Area": "Blanaeu-Gwent",
+      "Title": "Tredegar",
+      "Notes": "",
+      "Where": "Wetherspoons - Old cinema",
+      "Postcode": "",
+      "Link": ""
+    }
+  ]
+}
