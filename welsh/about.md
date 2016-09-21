@@ -7,7 +7,7 @@ title: About
 
 This site is step 1 in an attempt to provide an up to date listing of Welsh meetup groups. 
 
-Site developed by [James Mahoney](/), Welsh software developer that needs to speak more Welsh.
+Site developed by [James Mahoney](http://www.jamesmahoney.co.uk), Welsh software developer that needs to speak more Welsh.
 
 Data comes from this Google spreadsheet <a href="https://docs.google.com/spreadsheets/d/1zzhf4SebQ5IIU1PfrrAzh1d0Q2ZLDaesN-cQ2Ux0bwA/edit#gid=2043427168" target="_blank">here</a>.
 
@@ -19,7 +19,13 @@ Groups highlighted in red, together with the message "These details are unconfir
 
 As the site becomes a little more mature the plan is to find some volunteers to curate the list of meetups, and open it up to cover a wider area.
 
-Spotted an error? Have a meetup group to add? <a href="/contact.html">Get in touch</a>
+## Help us out
+
+A site like this needs to be up to date, and it needs to be correct. 
+
+Spotted an error? Have an extra meetup to add? Know about a meetup that's skipping a week? 
+
+Please <a href="/contact.html">Get in touch</a>
 
 ## Techie details
 
