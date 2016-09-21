@@ -1,16 +1,24 @@
 ---
-layout: default
-title: Home
+layout: meetups
+title: Welsh
 ---
 
-# Hi there, I'm James
 
-I write software, and occasional blog posts. 
 
-For now, there's not much here...
+<div class="jumbotron">
+      <div class="container">
+        <h1>Siaradwch mwy Cymraeg!</h1>
+        <p>Find Welsh practice groups in your local area. Click on one of the buttons below to get started</p>
+        <p><a class="btn btn-primary btn-lg" href="welsh/meetups.html?region=south-east" role="button">South-east »</a></p>
+      <p><a class="btn btn-primary btn-lg" href="welsh/about.html" role="button">About »</a></p>
+      
+	  </div>
+    </div>
 
-[about](/about.html)
 
-[contact](/contact.html)
 
-[speak more welsh](/welsh/index.html)
+<p>v1.1.2</p>
+	
+	  
+
+	

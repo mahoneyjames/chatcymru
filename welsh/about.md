@@ -25,4 +25,4 @@ Spotted an error? Have a meetup group to add? <a href="/contact.html">Get in tou
 
 This site is a single page app using jQuery and Bootstrap, hosted using GitHub Pages. Data comes from JSON documents hosted in Azure BLOBs, generated from a Google Spreadsheet.
 
-[blog post 1](/blog/2016/09/02/google_sheets_backend_data_store_via_json.html)
+[blog post 1](/blog/2016/09/21/welcome.html)
