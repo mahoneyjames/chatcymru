@@ -288,8 +288,28 @@ function printTableDay($tableBody, day, $json)
 	{
 		var item = $json.Items[index];
 		
-		if(item.When.Day==day)
+		if(item.When.Day!=day)
 		{
+			continue;
+		}
+		
+		if(item.When.Repeats=="OneOff")
+		{
+			if(item.When.Upcoming.length>0)
+			{
+				if(moment().isSameOrAfter(moment(item.When.Upcoming[0].When).add(1,'days')))
+				{
+					continue;
+				}
+					
+			}
+			else
+			{
+				continue;
+			}			
+		}
+			
+
 			if(!isHeaderRowAppended)
 			{
 				$row.appendTo($tableBody);
@@ -339,5 +359,5 @@ function printTableDay($tableBody, day, $json)
 		});
 	}
 }
-}
+
 

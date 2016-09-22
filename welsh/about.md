@@ -25,7 +25,7 @@ A site like this needs to be up to date, and it needs to be correct.
 
 Spotted an error? Have an extra meetup to add? Know about a meetup that's skipping a week? 
 
-Please <a href="/contact.html">Get in touch</a>
+Please <a href="/contact.html">get in touch</a>
 
 ## Techie details
 
