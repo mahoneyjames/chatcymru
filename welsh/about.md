@@ -13,10 +13,6 @@ Data comes from this Google spreadsheet <a href="https://docs.google.com/spreads
 
 All this information is maintained by hand based on groups known about in real life, or referenced on various Welsh learner's forums or Welsh for adults websites. 
 
-Groups hightlight in green are those known to have happened fairly recently, so there's a good chance that they are still running.
-
-Groups highlighted in red, together with the message "These details are unconfirmed" are ones that probably exist, but the information on them is too sparse. These are ones that we'd particularly like to know more about, so that the information can be updated or removed.
-
 As the site becomes a little more mature the plan is to find some volunteers to curate the list of meetups, and open it up to cover a wider area.
 
 ## Help us out
@@ -31,4 +27,4 @@ Please <a href="/contact.html">get in touch</a>
 
 This site is a single page app using jQuery and Bootstrap, hosted using GitHub Pages. Data comes from JSON documents hosted in Azure BLOBs, generated from a Google Spreadsheet.
 
-[blog post 1](/blog/2016/09/21/welcome.html)
+[blog post 1](http://www.jamesmahoney.co.uk/blog/2016/09/02/google_sheets_backend_data_store_via_json.html)
