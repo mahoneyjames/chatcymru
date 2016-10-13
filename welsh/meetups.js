@@ -146,21 +146,19 @@ function showCalendar($json)
 			{
 				for(var index=0;index<item.When.Upcoming.length; index++)
 				{
-				var upcomingItem = item.When.Upcoming[index];
-					log(upcomingItem);
-					var event = {title: item.Title + ' - ' + item.Area, 
-								start: upcomingItem.When + "T" + item.When.StartTime,
-								end: upcomingItem.When + "T" + item.When.EndTime,
-					className:['eventTitle'],
-					sourceItem: item};
-					
-					//log(item.When.Upcoming[index].IsCancelled);
-					if(upcomingItem.IsCancelled==true)
+					var upcomingItem = item.When.Upcoming[index];
+					if(upcomingItem.IsCancelled==undefined || upcomingItem.IsCancelled==false)
 					{
-						event.title += " (CANCELLED)";
+					
+						log(upcomingItem);
+						var event = {title: item.Title + ' - ' + item.Area, 
+									start: upcomingItem.When + "T" + item.When.StartTime,
+									end: upcomingItem.When + "T" + item.When.EndTime,
+						className:['eventTitle'],
+						sourceItem: item};
+					
+						events[events.length] = event;
 					}
-				
-					events[events.length] = event;
 				}
 			}
 		});
