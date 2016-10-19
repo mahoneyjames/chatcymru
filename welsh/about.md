@@ -28,3 +28,7 @@ Please <a href="/contact.html">get in touch</a>
 This site is a single page app using jQuery and Bootstrap, hosted using GitHub Pages. Data comes from JSON documents hosted in Azure BLOBs, generated from a Google Spreadsheet.
 
 [blog post 1](http://www.jamesmahoney.co.uk/blog/2016/09/02/google_sheets_backend_data_store_via_json.html)
+
+## Change log
+
+19th October 2016 - fixed a bug on the more info popup - old meetups were displaying instead of the next meetup 

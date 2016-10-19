@@ -111,9 +111,12 @@ function renderMeetup(item,$wrapper)
 	$whenDiv.append("<p>" + item.When.Summary + "</p>");
 	for(var index=0; index<item.When.Upcoming.length;index++)
 	{
-		if(!item.When.Upcoming[index].IsCancelled || item.When.Upcoming[index].IsCancelled==false)
+		log(moment());
+		log(moment(item.When.Upcoming[index].When));
+		if((!item.When.Upcoming[index].IsCancelled || item.When.Upcoming[index].IsCancelled==false)
+			&& moment(item.When.Upcoming[index].When).isAfter(moment()))
 		{	
-
+			
 			$whenDiv.append("<p>Next: " + moment(item.When.Upcoming[index].When).format('dddd Do MMMM') + "</p>");
 			break;
 		}
