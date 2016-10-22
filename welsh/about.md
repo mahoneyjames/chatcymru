@@ -32,3 +32,5 @@ This site is a single page app using jQuery and Bootstrap, hosted using GitHub P
 ## Change log
 
 19th October 2016 - fixed a bug on the more info popup - old meetups were displaying instead of the next meetup 
+
+22nd October 2016 - added support for "monthly" meetings that don't repeat on a specific day and week of the month
