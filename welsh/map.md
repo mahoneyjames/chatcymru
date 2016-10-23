@@ -49,6 +49,7 @@ title: Map demo
 	}
 
 	var map = null;
+	var openedWindow = null;
 
 	function fillMap($json)
 	{
@@ -73,21 +74,19 @@ title: Map demo
 					var contentDiv = $("<div/>");
 					renderMeetup(item,contentDiv);
 
-
-
-					var infowindow = new google.maps.InfoWindow({
-          				content: contentDiv.html()
-        			});
-
-					 marker.addListener('click', function() {
-          				infowindow.open(map, marker);
-        			});
+					var infowindow =  new google.maps.InfoWindow();
 
 					var content = contentDiv.html();
 					google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
 						return function() {
+							if(openedWindow!=null)
+							{
+								openedWindow.close();
+								openedWindow= null;
+							}
 							infowindow.setContent(content);
 							infowindow.open(map,marker);
+							openedWindow = infowindow;
 						};
 					})(marker,content,infowindow)); 
 				}
