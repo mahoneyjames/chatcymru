@@ -117,7 +117,7 @@ function renderMeetup(item,$wrapper)
 			&& moment(item.When.Upcoming[index].When).isAfter(moment()))
 		{	
 			
-			$whenDiv.append("<p>Next: " + moment(item.When.Upcoming[index].When).format('dddd Do MMMM') + "</p>");
+			$whenDiv.append("<p>Next: " + moment(item.When.Upcoming[index].When).format('dddd Do MMMM') + ' ' + item.When.StartTime + "</p>");
 			break;
 		}
 	}
