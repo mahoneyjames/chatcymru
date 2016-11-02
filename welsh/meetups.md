@@ -58,8 +58,10 @@ title: Meetups in Newport and the surrounding area
 
  <!-- Nav tabs -->
 <ul class="nav nav-tabs" id="tabStrip" role="tablist">
-	<li role="presentation" class="active"><a href="#list" aria-controls="list" role="tab" data-toggle="tab">List</a></li>
-	<li role="presentation"><a href="#calendar" aria-controls="calendar" role="tab" data-toggle="tab">Calendar</a></li>    
+	<li role="presentation" class="active"><a href="#list" aria-controls="list" role="tab" data-toggle="tab">Regular</a></li>
+	<li role="presentation"><a href="#oneoff" aria-controls="oneoff" role="tab" data-toggle="tab">One off</a></li>
+	<li role="presentation"><a href="#calendar" aria-controls="calendar" role="tab" data-toggle="tab">Calendar</a></li>
+	 <!--li role="presentation"><a href="#map" aria-controls="map" role="tab" data-toggle="tab">Map</a></li-->        
 </ul>
 
   <!-- Tab panes -->
@@ -82,6 +84,22 @@ title: Meetups in Newport and the surrounding area
 </div>
 	<div role="tabpanel" class="tab-pane" id="calendar">
 		<div id="calendarContent"><span class="loading">Loading...</span></div>
+	</div>
+		<div role="tabpanel" class="tab-pane" id="oneoff">
+								<div  class="fc fc-unthemed fc-ltr">
+		
+				<div class="fc-view-container" style="">
+					<div class="fc-view fc-listWeek-view fc-list-view fc-widget-content">
+						<table id="oneOffTable" class="fc-list-table">
+							<tbody>
+							</tbody>
+						</table>			
+				</div>
+			</div>
+		</div>
+	</div>
+			<div role="tabpanel" class="tab-pane" id="map">
+					<div id=""><span class="loading">TODO...</span></div>
 	</div>
 </div>
 
@@ -122,12 +140,21 @@ function setupTabs()
 	  $(this).tab('show')
 	  
 	});
+	
+	$('#tabStrip a[href="#oneoff"]').click(function (e) {
+	  e.preventDefault()
+	  $(this).tab('show')
+	  showOneOffMeetups();
+	  
+	});
 	$('#tabStrip a[href="#calendar"]').click(function (e) {
 	  e.preventDefault()
 	  $(this).tab('show')
 	  showCalendar($jsonData);
 	  
 	});
+
+	
 	
 }
 

@@ -253,6 +253,12 @@ function showMeetupsByDay($json)
 	return;
 }
 
+function showOneOffMeetups()
+{	
+	printOneOffs($jsonData);
+	return;
+}
+
 
 function printTableVersion($json)
 {
@@ -270,6 +276,108 @@ function printTableVersion($json)
 	printTableDay($tableBody, "Friday",$json);
 	printTableDay($tableBody, "Saturday",$json);
 	printTableDay($tableBody, "Sunday",$json);
+	
+}
+
+var oneOffsLoaded = false;
+function printOneOffs($json)
+{	
+	
+	if(oneOffsLoaded==true)
+	{
+		return;
+	}
+	var $table = $("#oneOffTable");
+	
+	var $tableBody = $table.find("tbody");
+	
+	
+	for(var index=0;index<$json.Items.length;index++)
+	{
+		var item = $json.Items[index];
+		if(item.When.Repeats=="OneOff")
+		{
+			log("oneoff");
+
+			//ignore stuff that has already happened
+			
+			if(item.When.Upcoming.length>0)
+			{
+				if(moment().isSameOrAfter(moment(item.When.Upcoming[0].When).add(1,'days')))
+				{
+					continue;
+				}
+					
+			}
+			else
+			{
+				continue;
+			}			
+			
+//TODO - put the actual date
+//TODO - group one off events by date
+//TODO - show the details
+
+			//day header
+			var $row = $(
+					'	<tr class="fc-list-heading" data-date="2016-09-06">'
+				+ '		<td class="fc-widget-header" colspan="3">'
+				+ '			<a class="fc-list-heading-main" data-goto="{&quot;date&quot;:&quot;2016-09-06&quot;,&quot;type&quot;:&quot;day&quot;}">Tuesday</a><a class="fc-list-heading-alt" data-goto="{&quot;date&quot;:&quot;2016-09-06&quot;,&quot;type&quot;:&quot;day&quot;}">September 6, 2016</a>'
+				+ '		</td>'
+				+ '	</tr>');
+			$row.find("a.fc-list-heading-main").text(moment(item.When.Upcoming[0].When).format('dddd'));
+			$row.find("a.fc-list-heading-alt").text(moment(item.When.Upcoming[0].When).format('MMMM DD, YYYY'));
+			
+			$row.appendTo($tableBody);
+
+			//event details
+			$row = $('<tr class="fc-list-item eventTitle">'
+					+ '		<td class="fc-list-item-time fc-widget-content"></td>'
+					+ '		<td class="fc-list-item-marker fc-widget-content">'
+					+ '			<span class="fc-event-dot"/>'
+					+ '		</td>'
+					+ '		<td class="fc-list-item-title fc-widget-content">'
+					+ '			<a></a><span class="fc-list-heading-alt"/>'
+					+ '		</td>'
+					+ '	</tr>');
+
+
+					//TODO - refactor this and share with the print day function
+			if(item.When.StartTime!=undefined && item.When.StartTime!="")
+			{
+				$row.find(".fc-list-item-time").text(moment("1963-09-23T" + item.When.StartTime).format("h:mma"));
+			}
+			var titleText = item.Title + " - " + item.Area;
+			
+
+			$row.find(".fc-list-item-title a").text(titleText);
+			// if(item.When.Repeats!='Weekly')
+			// {
+			// 	$row.find(".fc-list-item-title span").text(item.When.Summary);
+			// }
+			
+			$row.appendTo($tableBody);
+			$row.data("item",item);
+			$row.click(function(){
+			
+				$("#eventDetailBody").empty();
+				var item = $(this).data("item");
+				var $div = $("#eventDetailBody");
+				renderMeetup(item, $div);
+				
+				//$('#eventDetail .modal-title').text(item.Title);
+				$('#eventDetail').modal();
+				
+				return false;
+			
+			
+			
+			});
+
+		}
+	}
+
+	oneOffsLoaded = true;
 	
 }
 
@@ -296,18 +404,7 @@ function printTableDay($tableBody, day, $json)
 		
 		if(item.When.Repeats=="OneOff")
 		{
-			if(item.When.Upcoming.length>0)
-			{
-				if(moment().isSameOrAfter(moment(item.When.Upcoming[0].When).add(1,'days')))
-				{
-					continue;
-				}
-					
-			}
-			else
-			{
-				continue;
-			}			
+			continue;						
 		}
 			
 
