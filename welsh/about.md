@@ -36,3 +36,5 @@ This site is a single page app using jQuery and Bootstrap, hosted using GitHub P
 22nd October 2016 - added support for "monthly" meetings that don't repeat on a specific day and week of the month
 
 1st November 2016 - moved one off events to their own tab
+
+23rd March 2017 - Added support for Cardiff events
