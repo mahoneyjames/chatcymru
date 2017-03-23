@@ -10,6 +10,8 @@ title: Welsh
         <h1>Siaradwch mwy Cymraeg!</h1>
         <p>Find Welsh practice groups in your local area. Click on one of the buttons below to get started</p>
         <p><a class="btn btn-primary btn-lg" href="meetups.html?region=south-east" role="button">South-east »</a></p>
+		
+		<p><a class="btn btn-primary btn-lg" href="meetups.html?region=cardiff" role="button">Cardiff »</a></p>
       <p><a class="btn btn-primary btn-lg" href="about.html" role="button">About »</a></p>
       
 	  </div>
@@ -17,7 +19,7 @@ title: Welsh
 
 
 
-<p>v1.1.3</p>
+<p>v1.1.4</p>
 	
 	  
 
