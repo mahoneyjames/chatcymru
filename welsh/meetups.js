@@ -291,6 +291,8 @@ function printOneOffs($json)
 	
 	var $tableBody = $table.find("tbody");
 	
+	var oneOffItems = [];
+
 	
 	for(var index=0;index<$json.Items.length;index++)
 	{
@@ -314,6 +316,25 @@ function printOneOffs($json)
 				continue;
 			}			
 			
+			oneOffItems[oneOffItems.length] = item;
+		}
+	}
+	
+	
+	//sort the one off items in ascending date order
+	oneOffItems = oneOffItems.sort ( function (a, b){
+		//log(a.When.Upcoming[0].When);
+		//log(b.When.Upcoming[0].When);
+		   //log(Date(a.When.Upcoming[0].When) - new Date(b.When.Upcoming[0].When));
+       return new Date(a.When.Upcoming[0].When) - new Date(b.When.Upcoming[0].When);
+	});
+	
+	
+	for(var index=0;index<oneOffItems.length;index++)
+	{
+
+		var item = oneOffItems[index];
+		log(item);
 //TODO - put the actual date
 //TODO - group one off events by date
 //TODO - show the details
@@ -375,7 +396,7 @@ function printOneOffs($json)
 			});
 
 		}
-	}
+	
 
 	oneOffsLoaded = true;
 	
