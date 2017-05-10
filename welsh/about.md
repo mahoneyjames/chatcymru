@@ -38,3 +38,5 @@ This site is a single page app using jQuery and Bootstrap, hosted using GitHub P
 1st November 2016 - moved one off events to their own tab
 
 23rd March 2017 - Added support for Cardiff events
+
+10th May 2017 - Fixed the one off meetups to appear in ascending date order
