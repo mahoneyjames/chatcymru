@@ -9,7 +9,7 @@ const helpers = require('./helpers');
            
 const regions = [{id:"south-east", title: "South East"}, {id: "cardiff", title: "Cardiff"}];
 
-helpers.generateHtml("index", "index", {regions, region:null});
+
 
 
 for(var index in regions)
@@ -31,7 +31,7 @@ function processRegion(region)
         const meetupPrefix = `/meetups/${region.id}/`;
        
         for(var i in res.data.Items)
-        {
+        {  
             const item = res.data.Items[i];
             let filename = sanitisePath(`${meetupPrefix}${item.Title}`);
 
@@ -42,8 +42,8 @@ function processRegion(region)
                 {
                     console.log(`${filename} already exists. Think of a better way to make these unique...`);
                 } 
-            }
-
+            }  
+ 
 
             item.path=filename;
 
@@ -64,9 +64,13 @@ function processRegion(region)
         const meetupsByDay = helpers.tempGroupMeetups(regularMeetups);
         
 
-        helpers.generateHtml("region_index", `/regions/${region.id}/index`, {regions, region, meetups: res.data.Items, oneOffMeetupsByDate, meetupsByDay});
-        helpers.generateHtml("region_regular", `/regions/${region.id}/regular`, {regions, region, meetups: res.data.Items, oneOffMeetupsByDate, meetupsByDay});
+        helpers.generateHtml("region_index", `/regions/${region.id}/index`, {regions, region, meetups: res.data.Items, oneOffMeetupsByDate, meetupsByDay});        
         helpers.generateHtml("region_oneoff", `/regions/${region.id}/oneoff`, {regions, region, meetups: res.data.Items, oneOffMeetupsByDate, meetupsByDay});
         helpers.generateHtml("region_upcoming", `/regions/${region.id}/upcoming`, {regions, region, meetups: res.data.Items, oneOffMeetupsByDate, meetupsByDay});
     });
+
+    helpers.generateHtml("index", "index", {regions, region:null});
+    helpers.generateHtml("about", "about", {regions, region:null});
+    helpers.generateHtml("contact", "contact", {regions, region:null});
+
 }

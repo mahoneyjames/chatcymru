@@ -1,0 +1,7 @@
+[
+    {"when": "2016-10-19", "summary": "Fixed a bug on the more info popup - old meetups were displaying instead of the next meetup"},
+    {"when": "2016-10-22", "summary": "Added support for 'monthly' meetings that don’t repeat on a specific day and week of the month"},
+    {"when": "2016-11-01", "summary": "Moved one off events to their own tab"},
+    {"when": "2017-03-23", "summary": "Added support for Cardiff events"},
+    {"when": "2017-05-10", "summary": "Fixed the one off meetups to appear in ascending date order"}
+]

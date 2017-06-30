@@ -1,24 +1,29 @@
 extends layout
 
-block content
-    h1 #{region.title}
-    h2 One off meetings
-    div.fc.fc-unthemed.fc-ltr
-        div.fc-view-container
-            div.fc-view.fc-listWeek-view.fc-list-view.fc-widget-content                
-                table.fc-list-table
-                    tbody
-                        each date in oneOffMeetupsByDate
-                            - const dateMoment = helpers.moment(date[0])
-                            tr.fc-list-heading
-                                td.fc-widget-header(colspan="3") 
-                                    a.fc-list-heading-main() #{dateMoment.format("dddd")}                                                         
-                                    a.fc-list-heading-alt() #{dateMoment.format("MMM, D YYYY")}
-                            each meetup in date[1]
-                                tr.fc-list-item.eventTitle
-                                    td.fc-list-item-time.fc-widget-content #{meetup.When.StartTime}
-                                    td.fc-list-item-marker.fc-widget-content 
-                                        span.fc-event-dot                                   
-                                    td 
-                                        a(href=`${meetup.path}`) #{meetup.Title} - #{meetup.Area}    
-    
+block content    
+    h1 Special events
+    a.btn.btn-outline-primary.btn-sm(href=`/regions/${region.id}/index.htm`) View regular meetings
+
+    if oneOffMeetupsByDate.length > 0
+        div.fc.fc-unthemed.fc-ltr
+            div.fc-view-container
+                div.fc-view.fc-listWeek-view.fc-list-view.fc-widget-content                
+                    table.fc-list-table
+                        tbody
+                            each date in oneOffMeetupsByDate
+                                - const dateMoment = helpers.moment(date[0])
+                                tr.fc-list-heading
+                                    td.fc-widget-header(colspan="3") 
+                                        a.fc-list-heading-main() #{dateMoment.format("dddd")}                                                         
+                                        a.fc-list-heading-alt() #{dateMoment.format("MMM, D YYYY")}
+                                each meetup in date[1]
+                                    tr.fc-list-item.eventTitle
+                                        td.fc-list-item-time.fc-widget-content #{meetup.When.StartTime}
+                                        td.fc-list-item-marker.fc-widget-content 
+                                            span.fc-event-dot                                   
+                                        td 
+                                            a(href=`${meetup.path}`) #{meetup.Title} - #{meetup.Area}
+
+    if oneOffMeetupsByDate.length ==0
+        p Aw, nothing special's happening at the moment...                                                
+        

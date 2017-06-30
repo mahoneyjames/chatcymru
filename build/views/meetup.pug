@@ -1,15 +1,26 @@
 extends layout
 
 block content
-    h1 #{meetup.Title}
-    p #{meetup.Where}
-    p #{meetup.Notes}
+
+    div.card
+        h1.card-header #{meetup.Title} - #{meetup.Area}
+        div.card-block            
+            p.card-text #{meetup.Notes}
+            h6.card-subtitle Location
+            p.card-text #{meetup.Where}
+            p.card-text #{meetup.Postcode}
+            h6.card-subtitle When 
+            p.card-text #{meetup.When.Summary} @ #{meetup.When.StartTime}
+            if meetup.Link 
+                if !helpers.isImage(meetup.Link)
+                    a.card-link(href=meetup.Link target="_blank") More info            
+        if meetup.When.Upcoming.length>0
+            div.card-footer
+                | Next: #{helpers.moment(meetup.When.Upcoming[0].When).format("dddd Do MMM YYYY")} #{meetup.When.StartTime}
+
+
     if meetup.Link 
         if helpers.isImage(meetup.Link)
             img(src=meetup.Link)
-        else
-            a(href=meetup.Link target="_blank") more info
-    h1 When
-    p #{meetup.When.Summary}
-    if meetup.When.Upcoming.length>0
-        p Next: #{helpers.moment(meetup.When.Upcoming[0].When).format("dddd do MMM YYYY")} #{meetup.When.StartTime}
+        
+    //-pre=helpers.dump(meetup)
