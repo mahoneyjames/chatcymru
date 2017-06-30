@@ -1,0 +1,26 @@
+extends layout
+
+block content
+    h1 #{region.title}
+    h2 Regular meetings
+    
+    div.fc.fc-unthemed.fc-ltr
+        div.fc-view-container
+            div.fc-view.fc-listWeek-view.fc-list-view.fc-widget-content                
+                table.fc-list-table
+                    tbody
+                        each day in meetupsByDay
+                            tr.fc-list-heading
+                                td.fc-widget-header(colspan="3") 
+                                    a.fc-list-heading-main() #{day[0]}
+                            each meetup in day[1]
+                                tr.fc-list-item.eventTitle
+                                    td.fc-list-item-time.fc-widget-content #{meetup.When.StartTime}
+                                    td.fc-list-item-marker.fc-widget-content 
+                                        span.fc-event-dot                                   
+                                    td
+                                        a(href=`${meetup.path}`) #{meetup.Title} - #{meetup.Area}
+                                        if meetup.When.Repeats!="Weekly"
+                                            span.fc-list-heading-alt #{meetup.When.Summary}
+    
+    

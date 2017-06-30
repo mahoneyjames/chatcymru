@@ -1,0 +1,7 @@
+extends layout
+
+block content
+    h1 #{region.title}     
+    h2 Upcoming
+    pre=helpers.dump(meetupsByDay)
+    

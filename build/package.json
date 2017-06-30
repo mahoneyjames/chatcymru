@@ -1,0 +1,39 @@
+{
+  "name": " chatcymru",
+  "version": "1.0.0",
+  "description": "static site generator in node",
+  
+  "private" : true,
+  "engines": {
+    "node": ">= 7.6.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "nodemon ./previewHost/preview.js",
+    "run": "concurrently \"npm run serve\" \"npm run build\"",
+    "build": "nodemon ./build.js --ignore _generated/",
+    "getmetadata": "node ./download.js" 
+
+  },
+  "author": "",
+  "license": "ISC",
+   "dependencies": {
+    "axios": "0.15.3",
+    "dotenv": "4.0.0",
+    "express": "4.15.2",    
+    "multer": "1.3.0",
+    "pug": "2.0.0-beta6"   ,
+    "csv":"1.1.1",
+    "csvtojson": "1.1.6",
+    "moment": "2.18.1",
+    "es6-promisify": "5.0.0",
+    "showdown": "1.7.1",
+    "mkdirp": "0.5.1",
+    "jfile": "1.1.12",
+    "front-matter": "2.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "1.11.0",
+    "concurrently": "3.4.0"
+  }
+}

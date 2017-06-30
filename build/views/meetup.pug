@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    h1 #{meetup.Title}
+    p #{meetup.Where}
+    p #{meetup.Notes}
+    if meetup.Link 
+        if helpers.isImage(meetup.Link)
+            img(src=meetup.Link)
+        else
+            a(href=meetup.Link target="_blank") more info
+    h1 When
+    p #{meetup.When.Summary}
+    if meetup.When.Upcoming.length>0
+        p Next: #{helpers.moment(meetup.When.Upcoming[0].When).format("dddd do MMM YYYY")} #{meetup.When.StartTime}
