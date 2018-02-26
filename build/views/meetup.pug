@@ -14,13 +14,14 @@ block content
             if meetup.Link 
                 if !helpers.isImage(meetup.Link)
                     a.card-link(href=meetup.Link target="_blank") More info            
-        if meetup.When.Upcoming.length>0
+        - const nextMeetup = helpers.findNextMeetup(meetup)
+        if nextMeetup
             div.card-footer
-                | Next: #{helpers.moment(meetup.When.Upcoming[0].When).format("dddd Do MMM YYYY")} #{meetup.When.StartTime}
+                | Next: #{helpers.moment(nextMeetup.When).format("dddd Do MMM YYYY")} #{meetup.When.StartTime}
 
 
     if meetup.Link 
         if helpers.isImage(meetup.Link)
             img(src=meetup.Link)
         
-    //-pre=helpers.dump(meetup)
+    -//pre=helpers.dump(meetup)

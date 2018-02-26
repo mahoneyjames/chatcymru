@@ -3,7 +3,7 @@ const path = require('path');
 const showdown = require('showdown');
 const jfile = require('jfile');
 const frontmatter = require('front-matter');
-const axios = require('axios');
+const axios = require('axios'); 
 const moment = require('moment');           
 const helpers = require('./helpers');
            
@@ -14,6 +14,7 @@ const regions = [{id:"south-east", title: "South East"}, {id: "cardiff", title: 
 
 for(var index in regions)
 {    
+    
     processRegion(regions[index]);
 }
 function sanitisePath(path)
@@ -22,6 +23,7 @@ function sanitisePath(path)
 }
 function processRegion(region)
 {
+    console.log(`https://chatdirectory.blob.core.windows.net/simpleapi/${region.id}/meetups.json`);
    axios.get(`https://chatdirectory.blob.core.windows.net/simpleapi/${region.id}/meetups.json`)
     .then(function(res){
         console.log(region);
@@ -44,7 +46,7 @@ function processRegion(region)
                 } 
             }  
  
-
+console.log(filename);
             item.path=filename;
 
             helpers.generateHtml("meetup",filename.slice(0, filename.length-4), {region, regions, meetup:item});
@@ -70,7 +72,8 @@ function processRegion(region)
     });
 
     helpers.generateHtml("index", "index", {regions, region:null});
-    helpers.generateHtml("about", "about", {regions, region:null});
+    const changes = require('./changelog.json');
+    helpers.generateHtml("about", "about", {regions, region:null, changes});
     helpers.generateHtml("contact", "contact", {regions, region:null});
 
 }

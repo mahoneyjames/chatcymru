@@ -22,3 +22,10 @@ block content
         a(href="http://www.jamesmahoney.co.uk/blog/2016/09/02/google_sheets_backend_data_store_via_json.html") blog post 1
 
     h1 Change log
+    ul
+      each change in changes
+        li #{change.when} - #{change.summary}
+          if change.link
+            ul
+              li 
+                a(href=`${change.link}` target="_blank") Read more

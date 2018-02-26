@@ -57,13 +57,26 @@ exports.ensureDirectoryExists = (directory)=>{
 
 exports.generateHtml = (view, outputFile, options) =>
 {
+
+    console.log("Start" + outputFile);
     options.helpers = exports; 
     options.siteRoot = "";   
     const html = pug.renderFile(`${__dirname}/views/${view}.pug`,options);
 
-    const fullOutputFileName =`./_generated/${outputFile}.htm`;    
+    let fullOutputFileName =`./_generated`;
+    if(outputFile.substring(0,1)=="/")
+    {
+        fullOutputFileName+=`${outputFile}.htm`;    
+    }
+    else
+    {
+        fullOutputFileName+=`/${outputFile}.htm`;    
+    }
+    
+    console.log("full:" + fullOutputFileName);    
     exports.ensureDirectoryExists(fullOutputFileName);
     fs.writeFileSync(fullOutputFileName, html, 'utf-8');
+    console.log("finished!");
 }
 
 exports.writeJson = (filename, json) =>
@@ -78,6 +91,21 @@ exports.sanitisePath = (path) =>
     return path.split(" ").join("-") + ".htm";
 }
 
+exports.findNextMeetup = (meetup) =>
+{
+    var now = moment();
+    console.log(now);
+    for(var index=0;index<meetup.When.Upcoming.length;index++)
+    {
+        var next = meetup.When.Upcoming[index];
+        if(next.When && moment(next.When).isAfter(now))
+        {
+            return next;
+        }
+    }
+
+    return null;
+}
 
 
 exports.generateFileHtmlFromMarkdown = (view, sourceFile, outputFile, options) =>
