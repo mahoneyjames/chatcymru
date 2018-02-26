@@ -40,3 +40,5 @@ This site is a single page app using jQuery and Bootstrap, hosted using GitHub P
 23rd March 2017 - Added support for Cardiff events
 
 10th May 2017 - Fixed the one off meetups to appear in ascending date order
+
+26th Feb 2018 - Fixed the meetup data - it mysteriously stopped working, due to Microsoft's strange business practice of requiring payment for cloud hosting. Weirdos...
