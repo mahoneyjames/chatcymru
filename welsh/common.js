@@ -24,7 +24,7 @@ function getJson(region, callback,apiMode)
 		apiMode = 'simpleapi';
 	}
 	
-	var url = 'https://chatdirectory.blob.core.windows.net/' + apiMode + '/' + region + '/meetups.json';
+	var url = 'https://bridgeprototype.blob.core.windows.net/' + apiMode + '/' + region + '/meetups.json';
 	//url = '/welsh/meetups.json';
 	log(url);
 	$.get(url, null,function (data)
